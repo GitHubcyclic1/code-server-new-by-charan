@@ -32,9 +32,6 @@ ENV	CS_VERSION=3.11.0 \
 	LANGUAGE=en_US.UTF-8 \
 	LC_ALL=C.UTF-8
 # Install unzip + rclone (support for remote filesystem)
-RUN apt-get update && apt-get install unzip -y
-RUN curl https://rclone.org/install.sh | bash
-
 RUN apt-get update  \
 	&& apt-get install -y \
 # Base Packages
@@ -134,6 +131,9 @@ RUN apt-get update  \
 	/var/tmp/* 
 #Requests install 
 RUN pip3 install requests
+#Install req
+RUN apt-get update && apt-get install unzip -y
+RUN curl https://rclone.org/install.sh | bash
 
 
 COPY container/home/ $CUSTOM_HOME/
