@@ -62,7 +62,7 @@ RUN apt-get update  \
 # Code-Server
 	&& bash -c 'echo -e "Installing Code-Server..."' \
 	&& ARCH=$(dpkg --print-architecture) \
-	&& wget  -O /tmp/code-server.deb "https://github.com/coder/code-server/releases/download/v4.2.0/code-server-4.2.0-linux-amd64.tar.gz" \
+	&& wget  -O /tmp/code-server.deb "https://github.com/coder/code-server/releases/download/v4.2.0/code-server_4.2.0_amd64.deb" \
 	&& apt install -y /tmp/code-server.deb \
 	&& bash -c 'echo -e "Code-Server Installed!"'  \
 # Code-Server Extensions
