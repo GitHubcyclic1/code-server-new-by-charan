@@ -6,16 +6,10 @@ app_name=os.getenv("APP_NAME")
 os.system(f'echo {data} | base64 -d > /home/coder/.config/rclone/rclone.conf')
 print('config File Created')
 #Download
-try:
-    os.system(f'rclone sync test:{app_name} /app/WORKSPACE')
-except:
-    pass
+os.system(f'rclone sync test:{app_name} /app/WORKSPACE')
 print('files Synced')
 #upload Every 1 min
 while True:
-    try:
-        os.system(f'rclone sync  /app/WORKSPACE test:{app_name}')
-        print('Files Uploaded')
-    except:
-        pass
+    os.system(f'rclone sync  /app/WORKSPACE test:{app_name}')
+    print('Files Uploaded')
     time.sleep(60)
