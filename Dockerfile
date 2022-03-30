@@ -131,9 +131,6 @@ RUN apt-get update  \
 	/var/tmp/* 
 #Requests install 
 RUN pip3 install requests
-#Installing Chrome
-RUN	wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/938008/chrome-linux.zip -P /tmp && \
-	unzip /tmp/chrome-linux.zip -d /opt &&
 #Install req
 # Install unzip + rclone (support for remote filesystem)
 RUN apt-get update && apt-get install unzip -y
