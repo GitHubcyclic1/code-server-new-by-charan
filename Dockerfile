@@ -38,40 +38,11 @@ RUN apt-get update  \
 	tzdata software-properties-common apt-transport-https wget git curl vim nano zip sudo net-tools xvfb php npm supervisor gnupg \
 # C, C++
 	build-essential \
-# C-Sharp
-	mono-complete \
-# Clojure
-	clojure \
-# Java
-	default-jre \
-	default-jdk \
-# Lua
-	lua5.3 \
-# Perl
-	perl \
-	perl6 \
 # Python
 	python3 \
 	python3-pip \
-# R
-	r-base \
 # Ruby
 	ruby  \
-# Scala
-	&& wget https://www.scala-lang.org/files/archive/scala-2.13.6.deb -P /tmp  \
-	&& apt install -y /tmp/scala-2.13.6.deb  \
-# Yarn
-	&& npm install --global yarn  \
-# Go
-	&& bash -c 'echo "Installing Go..."'  \
-	&& wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz -P /tmp  \
-	&& tar -zxvf /tmp/go1.16.4.linux-amd64.tar.gz -C /tmp > /dev/null 2>&1  \
-	&& cp -r /tmp/go/ /usr/local  \
-	&& bash -c 'echo "Go Installed!"'  \
-# rust
-	&& curl https://sh.rustup.rs -sSf | sh -s -- -y  \
-	&& sudo chmod -R a+w $RUSTUP_HOME $CARGO_HOME \
-	&& cargo --version \
 # Nodejs(LTS Release)
 	&& bash -c 'echo "Installing Nodejs..."'  \
 	&& wget https://nodejs.org/dist/v14.17.0/node-v14.17.0-linux-x64.tar.xz -P /tmp  \
@@ -83,12 +54,6 @@ RUN apt-get update  \
 	&& apt install -y  /tmp/packages-microsoft-prod.deb  \
 	&& apt-get update  \
 	&& apt-get install -y powershell  \
-# Swift
-	&& bash -c 'echo "Installing Swift..."'  \
-	&& wget https://swift.org/builds/swift-5.4.1-release/ubuntu2004/swift-5.4.1-RELEASE/swift-5.4.1-RELEASE-ubuntu20.04.tar.gz -P /tmp  \
-	&& tar -zxvf /tmp/swift-5.4.1-RELEASE-ubuntu20.04.tar.gz -C /tmp > /dev/null 2>&1  \
-	&& cp -r /tmp/swift-5.4.1-RELEASE-ubuntu20.04/usr/* /usr  \
-	&& bash -c 'echo "Swift Installed!"'  \
 # Brave
 	&& curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg  \
 	&& echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|tee /etc/apt/sources.list.d/brave-browser-release.list  \
@@ -107,8 +72,6 @@ RUN apt-get update  \
 	pkief.material-icon-theme \
 	akamud.vscode-theme-onedark \
 	ms-python.python \
-	ms-dotnettools.csharp \
-	christian-kohler.npm-intellisense \
 	redhat.java \
 	formulahendry.code-runner \
 	seunlanlege.action-buttons \
