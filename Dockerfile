@@ -140,9 +140,6 @@ COPY container/code-server/pages/ /usr/lib/code-server/src/browser/pages/
 COPY container/code-server/media/ /usr/lib/code-server/src/browser/media/
 
 RUN chmod -R ug+rwx $CUSTOM_HOME/  \
-	&& chmod -R ug+rwx /usr/local/share/code-server/User  \
-# Ngrok
-	&& chmod +x $CUSTOM_HOME/.ngrok_install.sh  \
-	&& bash -c '$CUSTOM_HOME/.ngrok_install.sh' 
+	&& chmod -R ug+rwx /usr/local/share/code-server/User
 
 CMD supervisord -c $CUSTOM_HOME/.supervisord.conf
