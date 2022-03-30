@@ -25,6 +25,7 @@
 	},
 	"COMPILE_TIMEOUT":{
 	"description": "COMPILE TIMEOUT",
+	      "value" : "3000",
         "required" : true
 	}
     } 
