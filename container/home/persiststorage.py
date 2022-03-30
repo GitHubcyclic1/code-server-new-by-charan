@@ -2,6 +2,7 @@ import time
 import os
 data=os.getenv("RCLONE_DATA")
 app_name=os.getenv("APP_NAME")
+os.system(' rclone config file')
 #Config File
 os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
 print('config File Created')
