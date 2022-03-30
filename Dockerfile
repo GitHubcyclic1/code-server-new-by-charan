@@ -5,7 +5,7 @@ LABEL AboutImage "VS-Code-Server"
 
 LABEL Maintainer "Charan"
 
-
+ARG DEBIAN_FRONTEND=noninteractive
 #Code-Server Version
 ENV	CS_VERSION=3.11.0 \
 #Code-Server login type: {password, none}
