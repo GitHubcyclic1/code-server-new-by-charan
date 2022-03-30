@@ -5,6 +5,10 @@ app_name=os.getenv("APP_NAME")
 os.system(' rclone config file')
 #Config File
 os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
+os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
+os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
+os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
+os.system(f'echo {data} | base64 -d > /.config/rclone/rclone.conf')
 print('config File Created')
 #Download
 os.system(f'rclone sync test:{app_name} /app/WORKSPACE')
