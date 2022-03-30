@@ -22,7 +22,10 @@
 	"APP_NAME":{
 	"description": "Your App Name Here",
         "required" : true
+	},
+	"COMPILE_TIMEOUT":{
+	"description": "COMPILE TIMEOUT",
+        "required" : true
 	}
-	  
     } 
   }
