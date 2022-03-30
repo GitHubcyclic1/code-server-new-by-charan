@@ -1,8 +1,8 @@
 FROM debian:10
 
-LABEL AboutImage "debian:10_VS-Code-Server"
+LABEL AboutImage "VS-Code-Server"
 
-LABEL Maintainer "Apoorv Vyavahare <apoorvvyavahare@pm.me>"
+LABEL Maintainer "Charan"
 
 
 #Code-Server Version
@@ -129,6 +129,9 @@ RUN apt-get update  \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/* 
+#Requests install 
+RUN pip3 install requests
+
 
 COPY container/home/ $CUSTOM_HOME/
 
