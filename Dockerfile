@@ -1,6 +1,5 @@
 #FROM debian:10
 FROM ubuntu:20.04
-COPY container/home/ $CUSTOM_HOME/
 
 LABEL AboutImage "VS-Code-Server V2"
 
@@ -67,6 +66,7 @@ RUN apt-get update  \
 	&& apt install -y /tmp/code-server.deb \
 	&& bash -c 'echo -e "Code-Server Installed!"'  \
 # Code-Server Extensions
+	&& mkdir $CUSTOM_HOME/ \
 	&& mkdir $CUSTOM_HOME/.extensions \
 	&& chmod 777 -R $CUSTOM_HOME/.extensions \
 	&& for codextension in \
@@ -92,6 +92,7 @@ RUN apt-get update && apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | bash
 
 
+COPY container/home/ $CUSTOM_HOME/
 
 COPY container/code-server/User/ /usr/local/share/code-server/User/
 COPY container/code-server/pages/ /usr/lib/code-server/src/browser/pages/
