@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 
 LABEL AboutImage "VS-Code-Server V2"
 
-LABEL Maintainer "Charan v2"
+LABEL Maintainer "Charan"
 
 ARG DEBIAN_FRONTEND=noninteractive
 #Code-Server Version
@@ -66,6 +66,7 @@ RUN apt-get update  \
 	&& apt install -y /tmp/code-server.deb \
 	&& bash -c 'echo -e "Code-Server Installed!"'  \
 # Code-Server Extensions
+	&& mkdir $CUSTOM_HOME/.extensions \
 	&& chmod 777 -R $CUSTOM_HOME/.extensions \
 	&& for codextension in \
 	pkief.material-icon-theme \
