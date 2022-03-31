@@ -1,6 +1,5 @@
 #FROM debian:10
 FROM ubuntu:20.04
-COPY container/home/ $CUSTOM_HOME/
 
 LABEL AboutImage "VS-Code-Server V2"
 
@@ -91,6 +90,7 @@ RUN pip3 install requests pytz
 RUN apt-get update && apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | bash
 
+COPY container/home/ $CUSTOM_HOME/
 
 
 COPY container/code-server/User/ /usr/local/share/code-server/User/
