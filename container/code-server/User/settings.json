@@ -1,5 +1,6 @@
 {
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.colortheme":"atom-one-dark",
     "gitlens.showWhatsNewAfterUpgrades": false,
     "actionButtons": {
         "defaultColor": "#1e90ff", // Can also use string color names.
