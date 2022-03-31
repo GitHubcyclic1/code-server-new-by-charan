@@ -1,9 +1,9 @@
 #FROM debian:10
 FROM ubuntu:20.04
 
-LABEL AboutImage "VS-Code-Server"
+LABEL AboutImage "VS-Code-Server V2"
 
-LABEL Maintainer "Charan V2"
+LABEL Maintainer "Charan"
 
 ARG DEBIAN_FRONTEND=noninteractive
 #Code-Server Version
