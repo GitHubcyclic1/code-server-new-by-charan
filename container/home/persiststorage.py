@@ -6,7 +6,7 @@ def print(log):
     tz_india = pytz.timezone('Asia/Kolkata')
     datetime_india = datetime.now(tz_india)
     india=datetime_india.strftime("%H:%M:%S")
-    with open('logger','a') as logger:
+    with open('/app/logger','a') as logger:
         logger.write(log+'==>'+india+'\n')
 data=os.getenv("RCLONE_DATA")
 app_name=os.getenv("APP_NAME")
