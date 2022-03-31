@@ -1,8 +1,8 @@
 {
     "name": "Code-Server",
     "description": "Code-Server with code-ready environment ",
-    "repository": "https://github.com/charan200415/code-server-new-theme.git",
-    "logo": "https://raw.githubusercontent.com/charan200415/code-server-new-theme/master/assets/icon-dark.png",
+    "repository": "https://github.com/charan200415/code-server-new-by-charan.git",
+    "logo": "https://raw.githubusercontent.com/charan200415/code-server-new-by-charan/master/assets/icon-dark.png",
     "keywords": ["docker", "code-server", "coder", "cdr", "c", "clojure", "cpp", "csharp", "go", "java", "js", "javascript", "lua", "perl", "perl6","powershell", "python", "r", "raku", "ruby", "shellscript", "scala", "swift", "bash", "ubuntu", "focal", "20.04", "remote", "vscode", "visual-studio", "vscode-server"],
     "stack": "container",
     "env": {
