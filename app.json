@@ -29,6 +29,10 @@
       	"description": "Your Rclone Data \n cat $(rclone config file | sed -n 2p) | base64 --wrap=0",
         "required" : false
       	},
+	"RCLONE_REMOTE":{
+      	"description": "If Using Rclone Set Your Rclone Remote Name Down",
+        "required" : false
+      	},
 	"COMPILE_TIMEOUT":{
 	"description": "COMPILE TIMEOUT",
 	      "value" : "3000",
