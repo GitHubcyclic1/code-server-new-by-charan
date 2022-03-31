@@ -66,22 +66,9 @@ RUN apt-get update  \
 	&& apt install -y /tmp/code-server.deb \
 	&& bash -c 'echo -e "Code-Server Installed!"'  \
 # Code-Server Extensions
-	&& wget https://github.com/microsoft/vscode-cpptools/releases/download/1.3.1/cpptools-linux.vsix -P /tmp  \
-	&& code-server --install-extension /tmp/cpptools-linux.vsix --extensions-dir $CUSTOM_HOME/.extensions  \
-	&& for codextension in \
-	pkief.material-icon-theme \
-	akamud.vscode-theme-onedark \
-	ms-python.python \
-	redhat.java \
-	formulahendry.code-runner \
-	seunlanlege.action-buttons \
-	coenraads.bracket-pair-colorizer-2 \
-	yzhang.markdown-all-in-one \
-	ms-vscode.powershell \
-	daltonjorge.scala \
-	auchenberg.vscode-browser-preview \
-	rust-lang.rust \
-	; do code-server --install-extension $codextension --extensions-dir $CUSTOM_HOME/.extensions; done  \
+	&& code-server --install-extension ms-python.python --extensions-dir $CUSTOM_HOME/.extensions  \
+	&& code-server --install-extension PKief.material-icon-theme --extensions-dir $CUSTOM_HOME/.extensions  \
+	&& code-server --install-extension akamud.vscode-theme-onedark --extensions-dir $CUSTOM_HOME/.extensions  \
 # Jupyter Prerequisites
 	&& pip3 install -U pylint ipykernel  \
 # timezone
