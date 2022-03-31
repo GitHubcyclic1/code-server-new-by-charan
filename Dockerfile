@@ -66,9 +66,9 @@ RUN apt-get update  \
 	&& apt install -y /tmp/code-server.deb \
 	&& bash -c 'echo -e "Code-Server Installed!"'  \
 # Code-Server Extensions
-	&& code-server --install-extension ms-python.python --extensions-dir $CUSTOM_HOME/.extensions  \
-	&& code-server --install-extension PKief.material-icon-theme --extensions-dir $CUSTOM_HOME/.extensions  \
-	&& code-server --install-extension akamud.vscode-theme-onedark --extensions-dir $CUSTOM_HOME/.extensions  \
+	&& code-server --install-extension ms-python.python \
+	&& code-server --install-extension PKief.material-icon-theme \
+	&& code-server --install-extension akamud.vscode-theme-onedark \
 # Jupyter Prerequisites
 	&& pip3 install -U pylint ipykernel  \
 # timezone
