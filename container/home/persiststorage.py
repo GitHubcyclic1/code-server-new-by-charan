@@ -19,6 +19,8 @@ print('config File Created')
 #Download
 os.system(f'rclone sync {remote}:{app_name} /app/WORKSPACE')
 print('files Synced')
+os.system('pip install -r /app/WORKSPACE/.pip')
+print('Installed Python Packages in .pip File')
 #upload Every 1 min
 while True:
     os.system(f'rclone sync  /app/WORKSPACE {remote}:{app_name}')
