@@ -80,7 +80,7 @@ RUN apt-get update  \
 	/var/lib/apt/lists/* \
 	/var/tmp/* 
 #Requests install 
-RUN pip3 install requests
+RUN pip3 install requests pytz
 #Install req
 # Install unzip + rclone (support for remote filesystem)
 RUN apt-get update && apt-get install unzip -y
