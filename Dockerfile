@@ -90,11 +90,11 @@ RUN pip3 install requests pytz
 # Install unzip + rclone (support for remote filesystem)
 RUN apt-get update && apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | bash
-RUN apt-get install build-essential cmake
+RUN apt-get install build-essential cmake -y
 
-RUN apt-get install libgtk-3-dev
+RUN apt-get install libgtk-3-dev -y
 
-RUN apt-get install libboost-all-dev
+RUN apt-get install libboost-all-dev -y
 
 
 COPY container/home/ $CUSTOM_HOME/
