@@ -95,7 +95,7 @@ RUN apt-get install build-essential cmake -y
 RUN apt-get install libgtk-3-dev -y
 
 RUN apt-get install libboost-all-dev -y
-
+RUN  pip install face-recognition
 
 COPY container/home/ $CUSTOM_HOME/
 
