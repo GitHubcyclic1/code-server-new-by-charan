@@ -12,4 +12,4 @@
   * ![SS2](https://imgur.com/nBYSJqq.png)
   
 ## **Credits :**
-  * **MY OTHER WEBSITES** : [Shortu.ml](https://www.shortu.ml/), [chatappweb.cf](https://www.chatappweb.cf/)
+  * **MY OTHER WEBSITES** : [Shortu.ml](https://shortu.ml/), [chatappweb.cf](https://www.chatappweb.cf/)
