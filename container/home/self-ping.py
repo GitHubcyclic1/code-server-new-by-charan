@@ -11,14 +11,14 @@ if __name__ == "__main__":
         if "APP_NAME" not in os.environ:
             print("APP_NAME unset, terminating...")
             exit()
-        app_name = os.getenv("APP_NAME")
+        app_name = os.getenv("APP_URL")
         while True:
             try:
-                requests.get(f"https://{app_name}.herokuapp.com")
+                requests.get(app_name)
             except:
                 print("Ping failed, retrying...")
                 try:
-                    requests.get(f"https://{app_name}.herokuapp.com")
+                    requests.get(app_name)
                 except:
                     print("Cannot ping app, terminating...")
             sleep(10*60)
